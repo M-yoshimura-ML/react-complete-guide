@@ -3,6 +3,7 @@ import './App.css';
 import './components/Expenses/Expenses.css';
 import ExpenseItem from './components/Expenses/ExpenseItem';
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 import React from 'react';
 
 
@@ -14,7 +15,6 @@ const App = () => {
     {title:'Subscribe', amount:114.12, date: new Date(2022, 5, 14)},
     {title:'Bag', amount:24.12, date: new Date(2022, 5, 15)}
   ]
-  console.log(expenses[0].title);
 
   // return React.createElement(
   //   'div', {}, 
@@ -31,6 +31,7 @@ const App = () => {
           </div>
         )
       })} */}
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
