@@ -4,7 +4,7 @@ import './ExpenseForm.css';
 
 const ExpenseForm = (props) => {
     const [enteredTitle, seteEteredTitle] = useState('');
-    const [enteredAmount, setEnteredAmount] = useState(0);
+    const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
     // const [userInput, setUserInput] =useState({
     //     enteredTitle:'',
@@ -43,8 +43,8 @@ const ExpenseForm = (props) => {
         event.preventDefault();
         const expenseData = {
             title:enteredTitle,
-            amount:enteredAmount,
-            date:new Date(enteredDate) 
+            amount:+enteredAmount,
+            date:new Date(enteredDate),
         };
         
         props.onSaveExpenseData(expenseData);
@@ -69,6 +69,7 @@ const ExpenseForm = (props) => {
                     <input type='date' min='2019-01-01' max='2022-12-31' onChange={dateChangeHandler} value={enteredDate} />
                 </div>
                 <div className="new-expense__actions">
+                <button type="button" onClick={props.onCansel}>Cansel</button>
                     <button type="submit">Add Expense</button>
                 </div>
             </div>
