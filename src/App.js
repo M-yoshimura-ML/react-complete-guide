@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import './components/Expenses/Expenses.css';
 import Expenses from './components/Expenses/Expenses';
@@ -23,12 +22,7 @@ const App = () => {
       return [expense, ...prevExpenses];
     });
   }
-
-  // return React.createElement(
-  //   'div', {}, 
-  //   React.createElement('h2', {}, "Let's get started!"),
-  //   React.createElement(Expenses, {items:expenses}) 
-  // );
+ 
 
   return (
     <div className="App">
